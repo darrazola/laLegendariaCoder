@@ -1,0 +1,257 @@
+// Variables del Tema de Colores
+$Cerveza-1: #5881A6;
+$Cerveza-2: #FFA927;
+$Cerveza-3: #F27C53;
+$Cerveza-4: #DB640F;
+$Cerveza-5: #9A3A10;
+
+// Variables Avanzadas
+$font-base: 16px;
+$spacing-unit: 8px;
+
+// Mixins
+@mixin resetMarginPadding {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin subtleShadow {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@mixin transitionAll($duration: 0.3s, $easing: ease-in-out) {
+  transition: all $duration $easing;
+}
+
+// Funciones
+@function colorShade($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+// Placeholders
+%button-like {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  @include transitionAll();
+  @include subtleShadow;
+}
+
+%btn-base {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: $spacing-unit $spacing-unit * 2;
+  border-radius: $spacing-unit;
+  font-size: $font-base;
+  @include transitionAll();
+}
+
+// Estilos Globales
+* {
+  @include resetMarginPadding;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+  color: #2A2A2A; 
+  background-image: radial-gradient(circle at top left, $Cerveza-1, $Cerveza-5);
+  line-height: 1.6;
+
+  h1, h2 {
+    color: $Cerveza-2;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-decoration: underline $Cerveza-3;
+    margin-bottom: 20px;
+  }
+}
+
+#portada {
+  width: 100%;
+}
+
+nav.navbar {
+  background-color: $Cerveza-4;
+  color: #FFFFFF;
+  @include subtleShadow;
+}
+
+main {
+  padding: 50px;
+}
+
+article {
+  background-color: colorShade($Cerveza-1, 10%);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding: 20px;
+  @include transitionAll();
+  @include subtleShadow;
+
+  &:hover {
+    background-color: colorShade($Cerveza-1, 30%);
+    transform: translateY(-5px);
+  }
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+a {
+  @extend %button-like;
+  background-color: $Cerveza-2;
+  color: #2A2A2A;
+
+  &:hover {
+    background-color: $Cerveza-3;
+    transform: scale(1.05);
+  }
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  @include subtleShadow;
+
+  input, textarea {
+    width: 100%;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $Cerveza-4;
+    margin-bottom: 20px;
+    @include transitionAll();
+
+    &:focus {
+      border-bottom: 2px solid $Cerveza-3;
+      outline: none;
+    }
+  }
+
+  button {
+    @extend %button-like;
+    width: 100%;
+    margin-top: 20px;
+    background-color: $Cerveza-2;
+    color: #2A2A2A;
+  }
+}
+
+.footer {
+  background-color: $Cerveza-4;
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+
+  a {
+    margin: 0 10px;
+    color: $Cerveza-1;
+    @include transitionAll();
+
+    &:hover {
+      color: $Cerveza-2;
+    }
+  }
+}
+
+// Botones
+.btn-primary {
+  @extend %btn-base;
+  background-color: $Cerveza-2;
+  color: white;
+
+  &:hover {
+    background-color: $Cerveza-3;
+  }
+}
+
+.btn-secondary {
+  @extend %btn-base;
+  background-color: $Cerveza-1;
+  color: white;
+
+  &:hover {
+    background-color: colorShade($Cerveza-1, 20%);
+  }
+}
+
+.btn-danger {
+  @extend %btn-base;
+  background-color: $Cerveza-5;
+  color: white;
+
+  &:hover {
+    background-color: colorShade($Cerveza-5, 20%);
+  }
+}
+
+// Tarjetas (Cards)
+.card {
+  background-color: colorShade($Cerveza-1, 10%);
+  padding: $spacing-unit * 2;
+  border-radius: $spacing-unit * 2;
+  @include subtleShadow;
+  @include transitionAll();
+
+  &:hover {
+    transform: translateY(-$spacing-unit);
+  }
+
+  .card-header {
+    border-bottom: 1px solid colorShade($Cerveza-1, 30%);
+    margin-bottom: $spacing-unit;
+  }
+
+  .card-body {
+    padding: $spacing-unit;
+  }
+}
+
+// Campos de Entrada (Input)
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+  padding: $spacing-unit;
+  margin-bottom: $spacing-unit * 2;
+  border: 1px solid colorShade($Cerveza-2, 20%);
+  border-radius: $spacing-unit;
+}
+
+// Acordeones (Accordions)
+.accordion {
+  &-item {
+    border-bottom: 1px solid colorShade($Cerveza-1, 20%);
+    @include transitionAll();
+
+    &.active {
+      background-color: colorShade($Cerveza-1, 10%);
+    }
+  }
+
+  &-header {
+    cursor: pointer;
+    padding: $spacing-unit;
+    font-size: $font-base * 1.2;
+  }
+
+  &-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+    &.active {
+      max-height: 500px;
+    }
+  }
+}
