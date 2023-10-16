@@ -1,0 +1,127 @@
+/* Color Theme Variables */
+:root {
+   --Cerveza-1: #5881A6;
+   --Cerveza-2: #FFA927;
+   --Cerveza-3: #F27C53;
+   --Cerveza-4: #DB640F;
+   --Cerveza-5: #9A3A10;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Verdana, Geneva, Tahoma, sans-serif';
+  color: #2A2A2A; 
+  background-image: radial-gradient(circle at top left, var(--Cerveza-1), var(--Cerveza-5));
+  line-height: 1.6; /* Mejora la legibilidad */
+}
+
+h1, h2 {
+  color: var(--Cerveza-2);
+  text-align: center;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-decoration: underline var(--Cerveza-3);
+  margin-bottom: 20px; /* Añade espaciado */
+}
+
+#portada {
+  width: 100%;
+}
+
+nav.navbar {
+  background-color: var(--Cerveza-4);
+  color: #FFFFFF;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+main {
+  padding: 50px;
+}
+
+article {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+article:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px); /* Movimiento sutil hacia arriba */
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+a, form button {
+  display: inline-block;
+  background-color: var(--Cerveza-2);
+  color: #2A2A2A;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+a:hover, form button:hover {
+  background-color: var(--Cerveza-3);
+  transform: scale(1.05);
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo más claro con transparencia */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+form input, form textarea {
+  width: 100%;
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--Cerveza-4); /* Línea más fina */
+  margin-bottom: 20px;
+  transition: border-bottom 0.3s ease-in-out;
+}
+
+form input:focus, form textarea:focus {
+  border-bottom: 2px solid var(--Cerveza-3);
+  outline: none;
+}
+
+form button {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer {
+  background-color: var(--Cerveza-4);
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+}
+
+.footer a {
+  margin: 0 10px;
+  color: var(--Cerveza-1);
+  transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+  color: var(--Cerveza-2);
+}

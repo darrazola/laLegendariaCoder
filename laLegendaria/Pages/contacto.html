@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contacto | La Legendaria</title>
+    <style>
+        .nav-link:hover {
+            color: #007BFF;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .contacto__form input[type="submit"]:hover, 
+        .contacto__form input[type="reset"]:hover {
+            filter: brightness(0.9);
+            transition: filter 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="header__logo">
+                    <img src="../Media/favicon-icon-png.jpeg" width="50" class="img-fluid" alt="Logo La Legendaria">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <nav class="header__nav">
+                    <ul class="nav">
+                        <li class="nav-item active"><a class="nav-link" href="/index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Pages/nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Pages/productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Pages/ultimasNoticias.html">Últimas Noticias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+    <main class="container mt-5">
+        <section class="contacto">
+            <h2 class="mb-4">Contacto</h2>
+            <form method="post" name="miformulario" netlify class="contacto__form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="nombre" placeholder="Nombre">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="apellido" placeholder="Apellido">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Correo Electronico">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="comentarios" id="comentarios" cols="30" rows="7" placeholder="ESCRIBE TUS COMENTARIOS"></textarea>
+                </div>
+                <div class="form-group d-flex justify-content-between">
+                    <input type="submit" class="btn btn-primary" name="enviar" id="enviar" value="Enviar">
+                    <input type="reset" class="btn btn-danger" name="borrar" id="borrar" value="Borrar">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>La Legendaria &copy; 2023 - Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
+                    <ul class="list-unstyled d-flex">
+                        <li><a href="../Media/logoFacebook-48.png" class="mr-3">Facebook</a></li>
+                        <li><a href="../Media/logoInstagram.png" class="mr-3">Instagram</a></li>
+                        <li><a href="../Media/logoTikTok.png">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
