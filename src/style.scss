@@ -25,7 +25,7 @@ $spacing-unit: 8px;
 
 // Funciones
 @function colorShade($color, $percentage) {
-  @return mix(white, $color, $percentage);
+  @return mix(white, $color, $percentage * 100); // Corregido el porcentaje
 }
 
 // Placeholders
@@ -49,14 +49,18 @@ $spacing-unit: 8px;
 }
 
 // Estilos Globales
-* {
+body,
+h1, h2, h3, p { // Limitando el reset
   @include resetMarginPadding;
+}
+
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Verdana, Geneva, Tahoma, sans-serif';
-  color: #2A2A2A; 
+  color: #2A2A2A;
   background-image: radial-gradient(circle at top left, $Cerveza-1, $Cerveza-5);
   line-height: 1.6;
 

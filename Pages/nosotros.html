@@ -17,36 +17,29 @@
 <body>
 
     <!-- Navbar -->
-    <header class="header bg-dark">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <!-- Logo -->
-                <div class="col-md-4 text-center text-md-left mb-3 mb-md-0">
-                    <a href="#">
-                        <img src="../Media/favicon-icon-png.jpeg" width="50" class="img-fluid" alt="Logo La Legendaria" style="max-width: 150px;">
-                    </a>
-                </div>
-
-                <!-- Navegación -->
-                <div class="col-md-8">
-                    <nav class="header__nav">
-                        <ul class="nav justify-content-center justify-content-md-end">
-                            <li class="nav-item"><a class="nav-link text-white" href="/index.html">Inicio</a></li>
-                            <li class="nav-item active"><a class="nav-link text-white" href="#">Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link text-white" href="../Pages/productos.html">Productos</a></li>
-                            <li class="nav-item"><a class="nav-link text-white" href="../Pages/ultimasNoticias.html">Últimas Noticias</a></li>
-                            <li class="nav-item"><a class="nav-link text-white" href="../Pages/contacto.html">Contacto</a></li>
-                        </ul>
-                    </nav>
-                </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="../Media/favicon-icon-png.jpeg" width="50" alt="Logo La Legendaria"> La Legendaria
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Pages/productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Pages/ultimasNoticias.html">Últimas Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../Pages/contacto.html">Contacto</a></li>
+                </ul>
             </div>
         </div>
-    </header>
+    </nav>
 
     <!-- Contenido Principal -->
     <main class="container mt-5">
         <div class="row">
-
             <!-- Quiénes Somos -->
             <section class="col-lg-6 col-md-12 mb-5">
                 <h2 class="section__title mb-4">Quiénes somos</h2>
@@ -69,23 +62,30 @@
         </div>
     </main>
 
-    <!-- Pie de Página -->
-    <footer class="footer">
-      <div class="container-fluid">
-          <div class="row">
-              <div class="col-md-6">
-                  <p>La Legendaria &copy; 2023 - Todos los derechos reservados.</p>
-              </div>
-              <div class="col-md-6 d-flex justify-content-end">
-                  <ul class="list-unstyled d-flex">
-                      <li><a href="../Media/logoFacebook-48.png" class="mr-3">Facebook</a></li>
-                      <li><a href="../Media/logoInstagram.png" class="mr-3">Instagram</a></li>
-                      <li><a href="../Media/logoTikTok.png">TikTok</a></li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Información de Contacto</h4>
+                    <p>Dirección: Porongo, Santa Cruz</p>
+                    <p>Teléfono: +591 7088888</p>
+                    <p>Email: info@lalegendaria.com</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h4>Síguenos</h4>
+                    <a href="#" class="mr-3"><img src="../Media/logoFacebook-48.png" alt="Facebook Icon" width="30"></a>
+                    <a href="#" class="mr-3"><img src="../Media/logoInstagram.png" alt="Instagram Icon" width="30"></a>
+                    <a href="#" class="mr-3"><img src="../Media/logoTikTok.png" alt="TikTok Icon" width="30"></a>
+                </div>
+
+                <div class="col-md-4">
+                    <p>La Legendaria &copy; 2023 - Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
